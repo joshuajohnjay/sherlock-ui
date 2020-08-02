@@ -3,13 +3,17 @@
     
     <form class="center" @submit="handleSearch()">
       <label class="field a-field a-field_a3">
-        <input class="field__input a-field__input" @keydown.space.prevent v-model="username" placeholder="eg. jon_snow" required>
+        <input class="field__input a-field__input" @keydown.space.prevent v-model="username" placeholder="eg. jon_snow" :disabled='loading' required>
         <span class="a-field__label-wrap">
           <span class="a-field__label">username</span>
         </span>
       </label>
-      <button class="button" href="add-website-here">Search</button>
-      <div v-if='loading == true'> searching at {{siteList[loadingCounter]}} </div>
+      <button class="button" :disabled='loading'>Search</button>
+      <div v-if='loading == true' style="margin-top: 20px;"> searching at {{siteList[loadingCounter]}} </div>
+      <div v-if='loading == true' style="margin-top: 20px;"> please wait this might take a minute or two </div>
+      
+      <div class="body-image" v-if="sites.length == 0"><img :src="'../../static/sherlock-project.svg'"></div>
+
     </form>
 
   </div>
@@ -19,7 +23,7 @@
 import { mapGetters } from 'vuex'
 export default {
     computed: mapGetters([
-    'loading'
+    'loading','sites'
   ]),
   data: function () {
     return {
@@ -36,7 +40,7 @@ export default {
     startInterval: function () {
       setInterval(() => {
           this.loadingCounter = this.randomInt(290);
-      }, 500);
+      }, 100);
     },
     randomInt(max){
       return Math.floor(Math.random() * (max - 0 + 1)) + 0;

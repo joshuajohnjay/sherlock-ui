@@ -1,5 +1,6 @@
 *{
   font-family: 'Rajdhani', sans-serif;
+  box-sizing: border-box;
 }
 
 html{
@@ -9,7 +10,6 @@ html{
 .body{
   padding-left: 5%;
   padding-right: 5%;
-  
   height: 95vh;
 }
 
@@ -20,18 +20,42 @@ html{
   padding: 10px;
 }
 
-.wrap{
-  margin: 5px;
-  border-radius: 5px;
-  background-color: white;
-  height: 50px;
+.body-image {
+  padding-top: 50px;
 }
 
-.result{
-  padding-top: 10px;
-  display: table-cell; 
-  vertical-align: middle;
-  width: 1000vh;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.row{
+  padding: 10px;
+  width: 60%;
+  margin: auto;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding-left: 14px;
+}
+
+.left {
+  width: 35%;
+  border-radius: 10px 0 0 10px;
+}
+
+.right {
+  width: 65%;
+  border-radius: 0 10px 10px 0;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /* Search */
@@ -207,4 +231,10 @@ html{
   border-radius: 50px;
   border-color: #BBC2CA !important;
   transition: all 0.3s ease 0s;
+}
+
+
+.arrow{
+  font-size: xx-large;
+  padding-top: 5px;
 }

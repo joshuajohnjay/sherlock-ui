@@ -1,7 +1,7 @@
 'use strict'
 
 module.exports = {
-  title: 'sherlock-ui',
+  title: 'sherlock',
   // Options for webpack-dev-server
   // See https://webpack.js.org/configuration/dev-server
   devServer: {
