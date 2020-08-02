@@ -1,9 +1,8 @@
 
 <template>
-  <div>
-    <div v-if='loading == true'> Loading... </div>
-    <div v-for="(value, name) in sites">
-      {{name}} : {{value}}
+  <div class="center">
+    <div v-for="(value, name) in sites" :key="name">
+        <div class="result" >{{name}} : {{value}}</div>
     </div>
   </div>
 </template>
@@ -12,7 +11,7 @@
 import { mapGetters } from 'vuex'
 export default {
   computed: mapGetters([
-    'sites', 'loading'
+    'sites'
   ])
 }
 </script>

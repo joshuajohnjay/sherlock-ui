@@ -1,7 +1,10 @@
 <template>
-  <div class="page">
-    <search-form></search-form>
-    <site-list></site-list>
+  <div>
+    <div class='body'>
+      <search-form></search-form>
+      <site-list></site-list>
+    </div>
+
   </div>
 </template>
 
