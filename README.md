@@ -3,5 +3,5 @@
 
 This is an app version of the sherlock-project, so everyone can use it via web.
 
-Hosted at [contrivance.joshuajohnjay.com](http://sherlock-project.joshuajohnjay.com) 
+Hosted at [sherlock-project.joshuajohnjay.com](http://sherlock-project.joshuajohnjay.com) 
 #### [© sherlock-project](https://github.com/sherlock-project/sherlock)
